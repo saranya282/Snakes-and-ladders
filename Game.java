@@ -99,13 +99,13 @@ public class Game {
     private int getNewPosition(int changedposition) {
         for (Snake snake : snakes) {
             if (snake.getStart() == changedposition) {
-                System.out.println("Bitten by snake");
+                System.out.println("oops..Bitten by snake");
                 return snake.getEnd();
             }
         }
         for (Ladder ladder : ladders) {
             if (ladder.getStart() == changedposition) {
-                System.out.println("climbed ladder");
+                System.out.println("hurray climbed ladder");
                 return ladder.getEnd();
             }
         }
