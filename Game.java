@@ -97,15 +97,16 @@ public class Game {
     }
 
     private int getNewPosition(int changedposition) {
+         Player player = players.poll();
         for (Snake snake : snakes) {
             if (snake.getStart() == changedposition) {
-                System.out.println("oops..Bitten by snake");
+                System.out.println(player.getName() + "oops..Bitten by snake");
                 return snake.getEnd();
             }
         }
         for (Ladder ladder : ladders) {
             if (ladder.getStart() == changedposition) {
-                System.out.println("hurray climbed ladder");
+                System.out.println(player.getName() + "hurray climbed ladder");
                 return ladder.getEnd();
             }
         }
